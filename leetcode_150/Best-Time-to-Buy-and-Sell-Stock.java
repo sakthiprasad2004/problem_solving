@@ -1,11 +1,21 @@
 class Solution {
     public int maxProfit(int[] prices) {
-       int maxi=0;
-       int mini=prices[0];
-       for(int i=1;i<prices.length;i++){
-          if(prices[i] < mini) mini=prices[i];
-          maxi=Math.max(maxi,prices[i]-mini);
-       }
-       return maxi;
+        int profit;
+        int minprice = Integer.MAX_VALUE;
+        int maxprofit=0;
+        for(int p : prices){
+            if(p < minprice){
+                minprice = p; // update the minimum value;
+            }
+            else {
+                // 7 < 1 is false so it comes here
+                // to add 1 
+                profit = p - minprice; 
+                // (1-7)
+                 maxprofit = Math.max(maxprofit,profit);
+            }
+        }
+        return maxprofit;
+        
     }
 }

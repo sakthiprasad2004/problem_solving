@@ -19,3 +19,6 @@ class Solution {
         
     }
 }
+
+//procedure 
+//first of all identify the min if not min then it get substrated to the min and find the max prfoti
